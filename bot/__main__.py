@@ -62,13 +62,14 @@ def stats(update, context):
 
 def start(update, context):
     buttons = ButtonMaker()
-    buttons.buildbutton("Repo", "https://www.github.com/anasty17/mirror-leech-telegram-bot")
-    buttons.buildbutton("Report Group", "https://t.me/+MwgSi5vmQEA2N2Vk")
+    buttons.buildbutton("Join Channel", "https://t.me/+8HAHEgTmHYw1NmI1")
+    buttons.buildbutton("Join Group", "https://t.me/+zIXloPQr52AzMjQ9")
     reply_markup = InlineKeyboardMarkup(buttons.build_menu(2))
     if CustomFilters.authorized_user(update) or CustomFilters.authorized_chat(update):
         start_string = f'''
-This bot can mirror all your links to Google Drive!
+🧛‍♀️This Is A Powerful Leech Bot To Mirror All Links To Google Drive!🧛‍♀️
 Type /{BotCommands.HelpCommand} to get a list of available commands
+👬Made By @AafuSam13 and @Harshu_XD 👬
 '''
         sendMarkup(start_string, context.bot, update, reply_markup)
     else:
@@ -206,7 +207,7 @@ help_string = f'''
 
 def bot_help(update, context):
     button = ButtonMaker()
-    button.buildbutton("Other Commands", f"https://telegra.ph/{help}")
+    button.buildbutton("More Commands", f"https://telegra.ph/{help}")
     reply_markup = InlineKeyboardMarkup(button.build_menu(1))
     sendMarkup(help_string, context.bot, update, reply_markup)
 
